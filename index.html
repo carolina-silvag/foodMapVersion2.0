@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>foodMap</title>
+  <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/media.css">
+</head>
+<body>
+  <header id="header" class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 title-center">
+        <h1 class="title text-center">FoodMap</h1>        
+      </div>     
+    </div>
+  </header>
+  <section class="container-fluid">
+    <div class="page-header titlePrincipal text-center">
+      <h2>FoodMap</h2>
+    </div>
+    <div class="row container-fluid">
+      <div class="col-xs-12 maps" id="map">
+      </div>
+    </div>
+    <div class="subTitle text-center">
+      <h3>Comida cerca de ti</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="input-group input-group-lg">
+          <input id="inputSearch" type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button id="btnSearch" class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </span>
+        </div>  
+      </div>
+    </div>
+    <div class="container-fluid" id="listFood">
+      
+    </div>
+    <!-- Modal Registro-->
+    <div class="modal fade" id="modalLocal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content local text-center modal-body">
+          <button type="button" class="close btnClose" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="closeColor">&times;</span>
+          </button>
+          <span type="button" class="btn btn-light  text-center" data-toggle="modal"></span>
+
+          <div class="modal-body fondo">
+            <p class="text-center name"></p>
+            <div class="row">
+              <div class="col-xs-8 col-xs-offset-2" id="map2">
+              
+              </div>
+            </div>
+            <p class="text-center">Buenas comidas para todos los gustos</p>
+            <div class="row">
+              <div class="col-xs-6 direccion">
+                
+              </div>
+              <div class="col-xs-6">
+                <p>$$$ Todos los precios disponibles en nuestra pagina</p>
+              </div>
+            </div>
+            
+              <!-- <button type="button" class="btn btn-default dropdown-toggle btn-nos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Como te enteraste de nosotros? <span class="caret"></span></button> -->
+            <button type="button" class="btn btn-warning">PEDIR AHORA</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfdR2-p7bETCxjk_1qQzzDDmuHD47_lsI&callback=initialize&libraries=places" async defer></script>
+  <script src="assets/js/app.js"></script>
+  <!-- clave api zomato
+       db605020c76032269d89e88d2e318c42  -->
+</body>
+</html>
